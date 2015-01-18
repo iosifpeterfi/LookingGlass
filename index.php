@@ -59,7 +59,7 @@ require 'LookingGlass/Config.php';
       <header class="header nohighlight" id="overview">
         <div class="row">
           <div class="span12">
-            <h1><a id="title" href="<?php echo $_SERVER['REQUEST_URI']; ?>"><?php echo $siteName; ?></a></h1>
+            <h1><a id="title" href="<?php htmlspecialchars(echo $_SERVER['REQUEST_URI']); ?>"><?php echo $siteName; ?></a></h1>
           </div>
         </div>
       </header>
@@ -80,7 +80,7 @@ require 'LookingGlass/Config.php';
                   }
                 ?></p>
               </div>
-              <p>Your IP Address: <b><a href="#tests" id="userip"><?php echo $_SERVER['REMOTE_ADDR']; ?></a></b></p>
+              <p>Your IP Address: <b><a href="#tests" id="userip"><?php echo htmlspecialchars($_SERVER['REMOTE_ADDR']); ?></a></b></p>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ require 'LookingGlass/Config.php';
     </div><!-- /container -->
 
     <!-- Javascript -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="assets/js/LookingGlass.min.js"></script>
     <script src="assets/js/XMLHttpRequest.min.js"></script>
   </body>
