@@ -39,11 +39,12 @@ __IPv6 commands will only work if your server has external IPv6 setup (or tunnel
 
 ## Install
 
-1. Download [LookingGlass](https://github.com/downloads/telephone/LookingGlass/LookingGlass-1.2.0.zip) to the intended 
-folder within your web directory (and unzip)
+1. Download LookingGlass
 2. Navigate to the `LookingGlass` subdirectory in terminal
 3. Run `bash configure.sh`
 4. Follow the instructions and `configure.sh` will take care of the rest
+5. Restrict access of web client for LookingGlass subdirectory content. Either through .htaccess or web server config. The files do not need to be accessed directly on web, especially ratelimit.db. 
+
 
 _Forgot a setting? Simply run the `configure.sh` script again_
 
