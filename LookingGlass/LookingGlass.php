@@ -228,7 +228,7 @@ class LookingGlass
             if (ob_get_level() == 0) {
                 ob_start();
             }
-            $str = trim($str);
+            $str = htmlspecialchars(trim($str));
 
             // correct output for mtr
             if ($type === 'mtr') {
